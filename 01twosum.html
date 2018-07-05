@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>两数之和</title>
 </head>
 
 <body>
@@ -17,7 +17,23 @@
 
     <script type="text/javascript">
     	window.onload = function(){
-    		
+    		var twoSum = function(nums, target){
+    			let findArr =[],
+    				len = nums.length;
+    			for (var i = 0; i < len; i++) {
+    				for(var j = len - 1; j > i; j-- ){
+    					if(target === (nums[i] + nums[j])){
+    						findArr.push(i);
+    						findArr.push(j);
+    						return findArr;
+    					}
+    				}
+    			}
+    			
+    		}
+
+    		let inputArr = [3,2,4];
+    		console.log(twoSum(inputArr,6));
     	}
     </script>
 </body>
